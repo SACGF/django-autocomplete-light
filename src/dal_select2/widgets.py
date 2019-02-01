@@ -47,7 +47,8 @@ class Select2WidgetMixin(object):
 
         return forms.Media(
             js=(
-                'admin/js/vendor/jquery/jquery%s.js' % extra,
+                # dlawrence - see https://github.com/yourlabs/django-autocomplete-light/issues/1079#issuecomment-453395714
+                #'admin/js/vendor/jquery/jquery%s.js' % extra,
                 'autocomplete_light/jquery.init.js',
                 'admin/js/vendor/select2/select2.full%s.js' % extra,
             ) + i18n_file + (
